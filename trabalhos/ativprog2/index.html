@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Cadastro de cliente </title>
+
+</head>
+
+<body>
+
+    <form action="cadastrarClientes.php" method="post">
+
+        <fieldset>
+
+            <legend>Dados pessoais</legend>
+
+            <label for="nome">Nome: </label>
+            <input type="text" name="nome" id="nome" minlength="2" maxlength="50" autofocus required>
+
+            <label for="email">E-mail: </label>
+            <input type="email" name="email" id="email" required>
+
+            <label for="cpf">CPF: </label>
+            <input type="text" name="cpf" id="cpf" pattern="\d{3}\.\d{3}\.\d{3}-\d{2}" required>
+
+            <label for="idade">Idade: </label>
+            <input type="number" name="idade" id="idade" required>
+
+            <label for="tell">Tell: </label>
+            <input type="tel" name="tell" id="tell" required>
+
+            <label for="data">Data de nascimento: </label>
+            <input type="date" name="data" id="data">
+
+            <label>Sexo: </label>
+            <input type="radio" name="sexo" id="masculino" value="Masculino">
+            <label for="masculino">Masculino</label>
+
+            <input type="radio" name="sexo" id="feminino" value="Feminino">
+            <label for="feminino">Feminino</label>
+
+            <input type="radio" name="sexo" id="outros" value="Outros">
+            <label for="feminino">Outros</label>
+
+            <label for="estado-civil">Estado civil: </label>
+
+            <select id="estado-civil" name="Estado-civil">
+
+                <option value="casado">Casado(a)</option>
+                <option value="solteiro">Solteiro(a)</option>
+                <option value="viúvo">Viúvo(a)</option>
+                <option value="divorciado">Divorciado(a)</option>
+
+                
+            </select>
+                <input type="text" name="ADM" id="adm" value="ADM" disabled>
+            
+        </fieldset>
+
+        <fieldset>
+            <legend> Endereço de entrega </legend>
+
+            <label for="cep">CEP: </label>
+            <input type="number" name="cep" id="cep" required>
+
+            <label for="rua">Tipo de logradouro: </label>
+
+            <input type="radio" id="rua" name="tipo-logradouro" required>
+            <label for="rua">Rua</label>
+
+            <input type="radio" id="avenida" name="tipo-logradouro" required>
+            <label for="avenida">Avenida</label>
+
+            <input type="radio" id="praca" name="tipo-logradouro" required>
+            <label for="praca">Praça</label>
+
+            <label for="logradouro">Logradouro: </label>
+            <input type="text" name="logradouro" id="logradouro" required>
+
+            <label for="bairro">Bairro:</label>
+            <input type="text" name="bairro" id="bairro" required>
+
+            <label for="cidade">Cidade:</label>
+            <input type="text" name="cidade" id="cidade" required>
+
+            <label for="estado">Estado: </label>
+            <select id="estado" name="estado">
+                <option value="AC">(AC)Acre</option>
+                <option value="AL">(AL)Alagoas</option>
+                <option value="AM">(AM)Amazonas</option>
+                <option value="AP">(BA)Amapá</option>
+                <option value="BA">(BA)Bahia </option>
+                <option value="CE">(CE)Ceará</option>
+                <option value="DF">(DF)Distrito Federal</option>
+                <option value="ES">(ES)Espírito Santo</option>
+                <option value="GO">(GO)Goiás</option>
+                <option value="MA">(MA)Maranhão</option>
+                <option value="MS">(MS)Mato Grosso do Sul</option>
+                <option value="MT">(MT)Mato Grosso</option>
+                <option value="MG">(MG)Minas Gerais</option>
+                <option value="PB">(PB)Paraíba</option>
+                <option value="PA">(PA)Pará</option>
+                <option value="PE">(PE)Pernambuco</option>
+                <option value="PI">(PI)Piauí</option>
+                <option value="PR">(PR)Paraná</option>
+                <option value="RJ">(RJ)Rio de Janeiro</option>
+                <option value="RN">(RN)Rio Grande do Norte</option>
+                <option value="RO">(RO)Rondônia</option>
+                <option value="RR">(RR)Roraima</option>
+                <option value="RS">(RS)Rio Grande do Sul</option>
+                <option value="SC">(SC)Santa Catarina</option>
+                <option value="SE">(SE)Sergipe</option>
+                <option value="SP">(SP)São Paulo</option>
+                <option value="TO">(TO)Tocantins</option>
+            </select>
+
+        </fieldset>
+
+        <fieldset>
+            <legend>Informações adicionais</legend>
+
+            <label>Interesse: </label>
+
+            <input type="checkbox" id="filmes" name="gosto">
+            <label for="filmes">Filmes</label>
+
+            <input type="checkbox" id="informatica" name="gosto">
+            <label for="informatica">Informática</label>
+
+            <input type="checkbox" id="games" name="gosto">
+            <label for="games">Games</label>
+
+            <input type="checkbox" id="livros" name="gosto">
+            <label for="livros">Livros</label>
+
+            <input type="checkbox" id="roupas" name="gosto">
+            <label for="roupas">Roupas</label>
+
+            <label for="complemento">Complemento: </label>
+            <textarea name="complemento" id="complemento"></textarea>
+
+            <label for="anexo">Anexo: </label>
+            <input type="file" name="anexo" id="anexo">
+        </fieldset>
+
+
+        <input type="submit" value="Enviar">
+        <input type="reset" value="Limpar">
+
+        <input type="hidden" name="oculto" id="oculto">
+    </form>
+</body>
+
+</html>
